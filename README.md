@@ -1,12 +1,12 @@
 # Free Code Camp challenge on 🔥
-Do you want to Work faster with an nice setup
+Work faster with an nice setup
 
 ### tasks
-- Reload your browser
+- Reload your browser 
 - Jade compilation
 - Lhint the syntax Javascript
 - Compile es2015 with [Babel](https://babeljs.io/) 
-- Stylus compilation
+- Compilation with Stylus
 
 ### Prerequisites:
 1 Node, NPM and Gulp.
@@ -45,7 +45,7 @@ the main files are:
 | src/stylus/style.styl  | Stylus(CSS)                                | **folder** index.html/    |
 
 ---
-##How I Am Using This Workflow With FCC
+## How I Am Using This Workflow With FCC
 I clone the repo for each exercice or project.
 Once I'm done I copy the code in FCC you can use es6 with Freecocamp or copy the script in index.html/script.js
 
