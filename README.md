@@ -9,10 +9,10 @@ Work faster with an nice setup
 - Compilation with Stylus
 
 ### Prerequisites:
-1 Node, NPM and Gulp.
-  1 NPM: [https://docs.npmjs.com/cli/install](Install NPM)
-  2 NodeJs: [NodeJs](https://nodejs.org/en/download/)
-  3 Gulp: [Installing Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+1. Node, NPM and Gulp.
+  1. NPM: [https://docs.npmjs.com/cli/install](Install NPM)
+  2. NodeJs: [NodeJs](https://nodejs.org/en/download/)
+  3. Gulp: [Installing Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
 ---
 
