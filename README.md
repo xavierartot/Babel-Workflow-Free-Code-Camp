@@ -16,7 +16,7 @@ Dependencies:
 
 ---
 
-##Installation
+## Installation
 
 **1. In your Terminal clone the repo(Github)**
 
@@ -45,8 +45,9 @@ the main files are:
 | src/stylus/style.styl  | Stylus(CSS)                                | **folder** index.html/    |
 
 ---
-## How I Am Using This Workflow With FCC
-I clone the repo for each exercice or project.
-Once I'm done I copy the code in FCC you can use es6 with Freecocamp or copy the script in index.html/script.js
+## How Do You Use This Workflow With FCC
+Clone this repository.
+Once You're done. You'll copy the code in FCC you can use es6 with Free Code Camp or copy the script in index.html/script.js
+
 
 
