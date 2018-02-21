@@ -1,14 +1,14 @@
-# Free Code Camp Lab
-Work faster with an environment for web developer
+# Free Code Camp Lab on 🔥
+Do you want to Work faster with an nice setup
 
-###tasks
+### tasks
 - Reload your browser
 - Jade compilation
 - Lhint the syntax Javascript
 - Compile es2015 with [Babel](https://babeljs.io/) 
 - Stylus compilation
 
-###Prerequisites:
+### Prerequisites:
 1 Node, NPM and Gulp.
   1 NPM: [https://docs.npmjs.com/cli/install](Install NPM)
   2 NodeJs: [NodeJs](https://nodejs.org/en/download/)
