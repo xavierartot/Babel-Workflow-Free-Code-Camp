@@ -34,7 +34,7 @@ Dependencies:
 
 `gulp watch`
 
-** the first Babel precompilation takes 30 secs, this is normal, then it's takes 1 seconde**
+**the first Babel precompilation takes 30 secs, this is normal, then it's takes 1 seconde**
 
 the main files are:
 
