@@ -1,4 +1,4 @@
-# Free Code Camp Lab on 🔥
+# Free Code Camp challenge on 🔥
 Do you want to Work faster with an nice setup
 
 ### tasks
