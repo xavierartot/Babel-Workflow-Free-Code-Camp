@@ -3,8 +3,8 @@ Work faster with an nice setup
 
 ### tasks
 - Reload your browser 
-- Jade compilation
-- Lhint the syntax Javascript
+- Pug(Jade) templating
+- Lint Javascript
 - Compile es2015 with [Babel](https://babeljs.io/) 
 - Compilation with Stylus
 
