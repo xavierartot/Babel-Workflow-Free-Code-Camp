@@ -1,23 +1,22 @@
-//https://toddmotto.com/mastering-the-module-pattern/#revealing-module-pattern
-let Simon = ( () => {
-  let _public = (t) => {
-    let r = (t === '') ? t : t
-  }
+// https://toddmotto.com/mastering-the-module-pattern/#revealing-module-pattern
+const Simon = (() => {
+  const pub = (t) => {
+    const r = (t === '') ? t : t;
+    return r;
+  };
   // private
-  let _private = () => {
-    console.log('ddddd')
+  const priv = () => {
+    console.log('ddddd');
   };
 
-  //main
-  let main  = () => {
-    _private()
-   };
+  // main
+  const main = () => priv();
 
-  //return an object
+  // return an object
   return {
-    main : main
+    main,
+    pub,
   };
-
 })();
-Simon.main()
-//Simon.anotherMethod ()
+Simon.main();
+// Simon.anotherMethod ()

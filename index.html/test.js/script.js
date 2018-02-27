@@ -1,0 +1,1 @@
+"use strict";var Simon={main:function(){console.log("ddddd")}};Simon.main();

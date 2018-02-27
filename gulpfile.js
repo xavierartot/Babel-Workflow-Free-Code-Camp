@@ -1,62 +1,61 @@
-var argv        = require('yargs').argv
-var gulp        = require('gulp')
-var jade        = require('gulp-jade')
-var babel       = require('gulp-babel')
-var stylus      = require('gulp-stylus')
-var browserSync = require('browser-sync')
-var reload      = browserSync.reload;
-var sourcemaps = require('gulp-sourcemaps');
-var plumber = require('gulp-plumber');
+const argv = require('yargs').argv;
+const gulp = require('gulp');
+const jade = require('gulp-jade');
+const babel = require('gulp-babel');
+const stylus = require('gulp-stylus');
+const browserSync = require('browser-sync');
 
-//var dest = argv.dir || '../egoscio.github.io'
-var dest = argv.dir || './index.html'
+const reload = browserSync.reload;
+const sourcemaps = require('gulp-sourcemaps');
+const plumber = require('gulp-plumber');
 
-gulp.task('default', ['compile'])
+// var dest = argv.dir || '../egoscio.github.io'
+const dest = argv.dir || './index.html';
 
-gulp.task('compile', ['assets', 'jade', 'babel', 'stylus', 'browser-sync'])
+gulp.task('default', ['compile']);
+
+gulp.task('compile', ['assets', 'jade', 'babel', 'stylus']);
 
 
-gulp.task('assets', () => {
-  return gulp.src('src/assets/*')
-    .pipe(gulp.dest(dest))
-})
+gulp.task('assets', () => gulp.src('src/assets/*')
+  .pipe(gulp.dest(dest)));
 
-gulp.task('jade', () => {
-  return gulp.src('src/jade/*.jade')
-    .pipe(jade({ pretty: true, doctype: 'html' }))
-    .pipe(gulp.dest(dest))
-})
+gulp.task('jade', () => gulp.src('src/jade/*.jade')
+  .pipe(jade({ pretty: false, doctype: 'html' }))
+  .pipe(gulp.dest(dest)));
 
-gulp.task('babel', () => {
-  return gulp.src('src/babel/*.js')
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(babel({ presets: ['es2015'] }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dest))
-})
+gulp.task('babel', () => gulp.src('src/babel/*.js')
+  .pipe(plumber())
+  .pipe(sourcemaps.init())
+  .pipe(babel({
+    presets: ['es2015'],
+    minified: true,
+    comments: false,
+  }))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(dest)));
 
-gulp.task('stylus', () => {
-  return gulp.src('src/stylus/*.styl')
-    .pipe(sourcemaps.init())
-    .pipe(stylus())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dest))
-})
+gulp.task('stylus', () => gulp.src('src/stylus/*.styl')
+  .pipe(sourcemaps.init())
+  .pipe(stylus({
+    compress: true,
+  }))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(dest)));
 
-gulp.task('browser-sync', function() {  
+
+gulp.task('browser-sync', () => {
   browserSync.init(['./index.html/**.*'], {
     server: {
-      baseDir: "./index.html"
-    }
-  })
-})
+      baseDir: './index.html',
+    },
+  });
+});
 
 gulp.task('watch', ['browser-sync'], () => {
   gulp.watch('index.html/*.js', reload);
-  gulp.watch('src/assets/*', ['assets'])
-  gulp.watch('src/jade/*.jade', ['jade'])
-  gulp.watch('src/babel/*.js', ['babel'])
-  gulp.watch('src/stylus/*.styl', ['stylus'])
-  gulp.watch('src/stylus/*.styl', ['stylus'])
-})
+  gulp.watch('src/assets/*', ['assets']);
+  gulp.watch('src/jade/*.jade', ['jade']);
+  gulp.watch('src/babel/*.js', ['babel']);
+  gulp.watch('src/stylus/*.styl', ['stylus']);
+});
