@@ -20,7 +20,7 @@ Dependencies:
 
 **1. In your Terminal clone the repo(Github)**
 
-`git clone https://github.com/xavierartot/workflow-fcc my-project`
+`git clone https://github.com/xavierartot/Babel-Workflow-Free-Code-Camp my-project`
 
 **2. Go to the folder**
 
